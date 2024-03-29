@@ -1,0 +1,17 @@
+asp
+flutter_modular
+uno
+flutter_triple
+dio
+flutter_bloc
+shared_preferences
+go_router
+full_coverage
+intl
+mocktail
+mockito
+routefly
+http
+url_launcher
+path_provider
+cached_network_image
