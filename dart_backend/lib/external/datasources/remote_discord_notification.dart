@@ -10,7 +10,7 @@ class RemoteDiscordNotification implements DiscordNotificationDatasource {
 
   @override
   Future<void> notify({required String title, required String description, required String link}) async {
-    final response = await uno.post(
+    await uno.post(
       discordWebhookUrl,
       responseType: ResponseType.plain,
       data: {
@@ -35,7 +35,5 @@ class RemoteDiscordNotification implements DiscordNotificationDatasource {
         ]
       },
     );
-
-    print(response);
   }
 }
