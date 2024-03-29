@@ -1,5 +1,5 @@
 import 'package:dart_backend/infra/datasources/pubdev_datasource.dart';
-import 'package:realm/realm.dart';
+import 'package:realm_dart/realm.dart';
 
 import '../../infra/datasources/db_datasource.dart';
 import 'models/realm_package.dart';
@@ -23,8 +23,18 @@ class RealmDBDatasource implements DBDatasource {
   }
 
   @override
-  Future<void> savePackage(PubDevPackage package) {
-    // TODO: implement savePackage
-    throw UnimplementedError();
+  Future<void> savePackage(PubDevPackage package) async {
+    var pack = realm.find<RealmPackage>(package.name);
+
+    if (pack == null) {
+      realm.write(() {
+        realm.add(RealmPackage(package.name, package.version, package.link));
+      });
+    } else {
+      realm.write(() {
+        pack.version = package.version;
+        pack.link = package.link;
+      });
+    }
   }
 }

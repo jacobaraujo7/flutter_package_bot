@@ -10,7 +10,9 @@ dependencies:
   args: ^2.4.0
   auto_injector: ^2.0.4
   result_dart: ^1.1.1
-  realm: ^2.0.0
+  realm_dart: ^2.0.0
+  pub_api_client: ^2.7.0
+  uno: ^1.1.9
 
 dev_dependencies:
   http: ^1.1.0

@@ -1,4 +1,4 @@
-import 'package:realm/realm.dart'; // import realm package
+import 'package:realm_dart/realm.dart';
 
 part 'realm_package.realm.dart'; // declare a part file.
 

@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "dart_backend",
+            "cwd": "dart_backend",
+            "request": "launch",
+            "type": "dart",
+            "program": "bin/server.dart",
+            "toolArgs": [
+                "--define=DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/1223082473550774342/4FtuUdMqpmzj2Tqvy6B2C5-_1FPWlfVRr-a3dGRQBGfG4Zle2Q1hakF4FLCDLyWpcLXm"
+            ]
+
+        }
+    ]
+}

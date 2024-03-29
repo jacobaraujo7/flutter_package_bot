@@ -17,8 +17,8 @@ class DiscordNotifyNewVersionPackage implements NotifyNewVersionPackage {
   AsyncResult<PackageEntity, BackendError> call(PackageEntity package) {
     return repository
         .notifyToDiscord(
-          title: 'New version of ${package.name} is out! 🚀',
-          description: 'The new version of ${package.name} is ${package.version}',
+          title: '${package.name} tem uma nova versão! 🚀',
+          description: '${package.name} atualizado para a ${package.version}',
           link: package.url,
         )
         .pure(package);
